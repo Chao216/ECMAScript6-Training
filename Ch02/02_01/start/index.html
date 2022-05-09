@@ -2,9 +2,33 @@
 <html>
   <head>
     <title>ECMAScript</title>
+    <style>
+      #boxes {
+        display: flex;
+        justify-content: space-around;
+      }
+      #boxes > div {
+        height: 10px;
+        width: 20px;
+        background-color: pink;
+      }
+    </style>
   </head>
   <body>
     <h1>Let</h1>
-    <script type="text/javascript"></script>
+    <div id = "boxes"></div>
+    <script type="text/javascript">
+      console.log("Hello friend")
+      var div
+      var box =document.getElementById("boxes")
+
+      for (let i =0; i <10; i++) {
+        div = document.createElement("div");
+        div.onclick = function () {
+          alert("you are clicking on box "+ i)
+        }
+        box.appendChild(div)
+      }
+    </script>
   </body>
 </html>
