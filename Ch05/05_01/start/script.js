@@ -1,21 +1,21 @@
-let yell = "woo!";
+let food = "Shin Ramen"
 
-let party = yell.repeat(20);
+let myfood = food.repeat(10)
 
-console.log(party);
+console.log(myfood)
 
-let cat = {
-  meow(times) {
-    console.log("meow".repeat(times));
+let something = {
+  do1(input) {
+    console.log("do1".repeat(input))
   },
-  purr(times) {
-    console.log("prrr".repeat(times));
+  do2(input) {
+    console.log("do2".repeat(input))
   },
-  snore(times) {
-    console.log("ZzZzZ".repeat(times));
-  }
-};
+treefunc(cishu) {
+  console.log("WOkamkan shi shenme ".repeat(cishu))
+}
+}
 
-cat.meow(3);
-cat.purr(3);
-cat.snore(6);
+something.do1(10)
+something.do2(200)
+something.treefunc(100)
