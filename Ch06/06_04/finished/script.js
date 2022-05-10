@@ -1,5 +1,6 @@
 const delay = (seconds) =>
   new Promise((resolves) =>
+    // eslint-disable-next-line no-promise-executor-return
     setTimeout(resolves, seconds * 1000)
   );
 

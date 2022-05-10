@@ -1,28 +1,7 @@
-// const spacePeople = () => {
-//   return new Promise((resolves, rejects) => {
-//     const api =
-//       "http://api.open-notify.org/astros.json";
-//     const request = new XMLHttpRequest();
-//     request.open("GET", api);
-//     request.onload = () => {
-//       if (request.status === 200) {
-//         resolves(JSON.parse(request.response));
-//       } else {
-//         rejects(Error(request.statusText));
-//       }
-//     };
-//     request.onerror = (err) => rejects(err);
-//     request.send();
-//   });
-// };
+const trackcovid = () => {
+  fetch("https://api.covidtracking.com/v1/us/current.json").then((res) =>
+    res.json().then(console.log)
+  );
+};
 
-// spacePeople().then(
-//   (spaceData) => console.log(spaceData),
-//   (err) =>
-//     console.error(new Error("Can't load people"))
-// );
-
-
-fetch(
-  "http://api.open-notify.org/astros.json"
-).then(console.log);
+trackcovid().then((data) => console.log(data));

@@ -1,9 +1,7 @@
-let getSpacePeople = () =>
-  fetch(
-    "http://api.open-notify.org/astros.json"
-  ).then((res) => res.json());
+const getSpacePeople = () =>
+  fetch("http://api.open-notify.org/astros.json").then((res) => res.json());
 
-let spaceNames = () =>
+const spaceNames = () =>
   getSpacePeople()
     .then((json) => json.people)
     .then((people) => people.map((p) => p.name))

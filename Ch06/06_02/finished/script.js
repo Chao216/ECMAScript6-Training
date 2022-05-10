@@ -1,7 +1,6 @@
-const spacePeople = () => {
-  return new Promise((resolves, rejects) => {
-    const api =
-      "http://api.open-notify.org/astros.json";
+const spacePeople = () =>
+  new Promise((resolves, rejects) => {
+    const api = "http://api.open-notify.org/astros.json";
     const request = new XMLHttpRequest();
     request.open("GET", api);
     request.onload = () => {
@@ -14,10 +13,8 @@ const spacePeople = () => {
     request.onerror = (err) => rejects(err);
     request.send();
   });
-};
 
 spacePeople().then(
   (spaceData) => console.log(spaceData),
-  (err) =>
-    console.error(new Error("Can't load people"))
+  () => console.error(new Error("Can't load people"))
 );
