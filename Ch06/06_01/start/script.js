@@ -14,13 +14,12 @@
 
 //         setTimeout(resolve, seconds*1000);
 //     });
-    
 // };
 
 // delay(20).then(()=>console.log("delayed response"))
 
 const beat = (value1)=>{
-    new Promise((right, wrong)=>{
+    new Promise((right, wrong) =>{
         if (value1 > 10) {
             wrong (
                 new Error("the number your put is big!!!")
@@ -34,3 +33,5 @@ const beat = (value1)=>{
 }
 
 beat(110)
+
+console.log(  "hello"  )
